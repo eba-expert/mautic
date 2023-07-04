@@ -1,0 +1,12 @@
+{
+  "packages": ["php81Packages.composer@latest", "php@8.1", "caddy@latest"],
+  "shell": {
+    "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
+    "scripts": {
+      "start": ["devbox services up"]
+    }
+  },
+  "env": {
+    "CADDY_ROOT_DIR": "${PWD}/5.0.0-alpha1"
+  }
+}

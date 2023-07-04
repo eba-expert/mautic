@@ -1,0 +1,17 @@
+# See https://caddyserver.com/docs/caddyfile for more details
+{
+	admin 0.0.0.0:2020
+	auto_https disable_certs
+	http_port 8800
+	https_port 4443
+}
+
+:8088 {
+	root * {$CADDY_ROOT_DIR}
+	php_fastcgi localhost:8082
+	encode gzip
+	file_server
+	log {
+		output file {$CADDY_LOG_DIR}/caddy.log
+	}
+}
