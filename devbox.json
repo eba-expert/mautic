@@ -1,7 +1,7 @@
 {
   "packages": ["php81Packages.composer@latest", "php@8.1", "caddy@latest"],
   "shell": {
-    "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
+    "init_hook": ["devbox services up"],
     "scripts": {
       "start": ["devbox services up"]
     }
